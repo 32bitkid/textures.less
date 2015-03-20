@@ -1,0 +1,262 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,900,400);
+.lines.normal {
+  background-position: 0 0;
+  background-size: auto;
+  background-image: -webkit-repeating-linear-gradient(135deg, transparent 0, transparent 0.44em, #000000 0.45em, #000000 0.55em, transparent 0.56em, transparent 1em);
+  background-image: repeating-linear-gradient(-45deg, transparent 0, transparent 0.44em, #000000 0.45em, #000000 0.55em, transparent 0.56em, transparent 1em);
+}
+.lines.thick {
+  background-position: 0 0;
+  background-size: auto;
+  background-image: -webkit-repeating-linear-gradient(135deg, transparent 0, transparent 0.32em, #000000 0.35em, #000000 0.65em, transparent 0.68em, transparent 1em);
+  background-image: repeating-linear-gradient(-45deg, transparent 0, transparent 0.32em, #000000 0.35em, #000000 0.65em, transparent 0.68em, transparent 1em);
+}
+.lines.big {
+  background-position: 0 0;
+  background-size: auto;
+  background-image: -webkit-repeating-linear-gradient(135deg, transparent 0, transparent 0.02em, #000000 0.1em, #000000 0.9em, transparent 0.98em, transparent 1em);
+  background-image: repeating-linear-gradient(-45deg, transparent 0, transparent 0.02em, #000000 0.1em, #000000 0.9em, transparent 0.98em, transparent 1em);
+}
+.lines.custom_thickness {
+  background-position: 0 0;
+  background-size: auto;
+  background-image: -webkit-repeating-linear-gradient(135deg, transparent 0, transparent 0.66666667px, #000000 2px, #000000 4px, transparent 5.33333333px, transparent 6px);
+  background-image: repeating-linear-gradient(-45deg, transparent 0, transparent 0.66666667px, #000000 2px, #000000 4px, transparent 5.33333333px, transparent 6px);
+}
+.lines.custom_angle {
+  background-position: 0 0;
+  background-size: auto;
+  background-image: -webkit-repeating-linear-gradient(17.6deg, transparent 0, transparent 0.44em, #000000 0.45em, #000000 0.55em, transparent 0.56em, transparent 1em);
+  background-image: repeating-linear-gradient(72.4deg, transparent 0, transparent 0.44em, #000000 0.45em, #000000 0.55em, transparent 0.56em, transparent 1em);
+}
+.lines.multiple {
+  background-position: 0 0, 0 0;
+  background-size: auto, auto;
+  background-image: -webkit-repeating-linear-gradient(160deg, transparent 0, transparent 0.44em, #000000 0.45em, #000000 0.55em, transparent 0.56em, transparent 1em), -webkit-repeating-linear-gradient(70deg, transparent 0, transparent 0.44em, #000000 0.45em, #000000 0.55em, transparent 0.56em, transparent 1em);
+  background-image: repeating-linear-gradient(-70deg, transparent 0, transparent 0.44em, #000000 0.45em, #000000 0.55em, transparent 0.56em, transparent 1em), repeating-linear-gradient(20deg, transparent 0, transparent 0.44em, #000000 0.45em, #000000 0.55em, transparent 0.56em, transparent 1em);
+}
+.lines.colored {
+  background-position: 0 0;
+  background-size: auto;
+  background-image: -webkit-repeating-linear-gradient(135deg, transparent 0, transparent 0.44em, #ffa500 0.45em, #ffa500 0.55em, transparent 0.56em, transparent 1em);
+  background-image: repeating-linear-gradient(-45deg, transparent 0, transparent 0.44em, #ffa500 0.45em, #ffa500 0.55em, transparent 0.56em, transparent 1em);
+}
+.lines.colored_plus_bkg {
+  background-color: #990000;
+  background-position: 0 0;
+  background-size: auto;
+  background-image: -webkit-repeating-linear-gradient(30deg, transparent 0, transparent 0.44em, #ffa500 0.45em, #ffa500 0.55em, transparent 0.56em, transparent 1em);
+  background-image: repeating-linear-gradient(60deg, transparent 0, transparent 0.44em, #ffa500 0.45em, #ffa500 0.55em, transparent 0.56em, transparent 1em);
+}
+.dots.normal {
+  background-position: 0 0;
+  background-size: 1em 1em;
+  background-image: -webkit-radial-gradient(circle closest-side, #000000 0.075em, transparent 0.175em);
+  background-image: radial-gradient(circle closest-side, #000000 0.075em, transparent 0.175em);
+}
+.dots.heavy {
+  background-position: 0 0;
+  background-size: 1em 1em;
+  background-image: -webkit-radial-gradient(circle closest-side, #000000 0.2em, transparent 0.3em);
+  background-image: radial-gradient(circle closest-side, #000000 0.2em, transparent 0.3em);
+}
+.dots.light {
+  background-position: 0 0;
+  background-size: 1em 1em;
+  background-image: -webkit-radial-gradient(circle closest-side, #000000 0em, transparent 0.1em);
+  background-image: radial-gradient(circle closest-side, #000000 0em, transparent 0.1em);
+}
+.dots.spread {
+  background-position: 0 0;
+  background-size: 2em 2em;
+  background-image: -webkit-radial-gradient(circle closest-side, #000000 0.2em, transparent 0.3em);
+  background-image: radial-gradient(circle closest-side, #000000 0.2em, transparent 0.3em);
+}
+.dots.close {
+  background-position: 0 0;
+  background-size: 0.5em 0.5em;
+  background-image: -webkit-radial-gradient(circle closest-side, #000000 0.1em, transparent 0.15em);
+  background-image: radial-gradient(circle closest-side, #000000 0.1em, transparent 0.15em);
+}
+.dots.colored {
+  background-position: 0 0;
+  background-size: 1em 1em;
+  background-image: -webkit-radial-gradient(circle closest-side, #ffa500 0.075em, transparent 0.175em);
+  background-image: radial-gradient(circle closest-side, #ffa500 0.075em, transparent 0.175em);
+}
+.dots.colored_with_bkg {
+  background-color: #990000;
+  background-position: 0 0;
+  background-size: 0.5em 0.5em;
+  background-image: -webkit-radial-gradient(circle closest-side, #ffa500 0.1625em, transparent 0.2125em);
+  background-image: radial-gradient(circle closest-side, #ffa500 0.1625em, transparent 0.2125em);
+}
+.mixed {
+  background-color: #333333;
+  background-position: 0 0, 0 0;
+  background-size: auto, 0.5em 0.5em;
+  background-image: -webkit-repeating-linear-gradient(30deg, transparent 0, transparent 0.44em, #ffffff 0.45em, #ffffff 0.55em, transparent 0.56em, transparent 1em), -webkit-radial-gradient(circle closest-side, #999999 0.075em, transparent 0.125em);
+  background-image: repeating-linear-gradient(60deg, transparent 0, transparent 0.44em, #ffffff 0.45em, #ffffff 0.55em, transparent 0.56em, transparent 1em), radial-gradient(circle closest-side, #999999 0.075em, transparent 0.125em);
+}
+.checkered.normal {
+  background-size: 24px 24px, 24px 24px;
+  background-position: 0 0, 12px 12px;
+  background-image: -webkit-linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%), -webkit-linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%);
+  background-image: linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%), linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%);
+}
+.checkered.heavy {
+  background-size: 32px 32px, 32px 32px;
+  background-position: 0 0, 16px 16px;
+  background-image: -webkit-linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%), -webkit-linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%);
+  background-image: linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%), linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%);
+}
+.checkered.light {
+  background-size: 10px 10px, 10px 10px;
+  background-position: 0 0, 5px 5px;
+  background-image: -webkit-linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%), -webkit-linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%);
+  background-image: linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%), linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%);
+}
+.checkered.colored {
+  background-size: 24px 24px, 24px 24px;
+  background-position: 0 0, 12px 12px;
+  background-image: -webkit-linear-gradient(45deg, #008000 25%, transparent 25%, transparent 75%, #008000 75%), -webkit-linear-gradient(45deg, #008000 25%, transparent 25%, transparent 75%, #008000 75%);
+  background-image: linear-gradient(45deg, #008000 25%, transparent 25%, transparent 75%, #008000 75%), linear-gradient(45deg, #008000 25%, transparent 25%, transparent 75%, #008000 75%);
+}
+.polka.normal {
+  background-size: 10px 10px, 10px 10px;
+  background-position: 0 0, 5px 5px;
+  background-image: -webkit-radial-gradient(center center, circle 2px, #000000 90%, transparent), -webkit-radial-gradient(center Center, circle 2px, #000000 90%, transparent);
+  background-image: radial-gradient(circle 2px at center center, #000000 90%, transparent), radial-gradient(circle 2px at center Center, #000000 90%, transparent);
+}
+.polka.heavy {
+  background-size: 16px 16px, 16px 16px;
+  background-position: 0 0, 8px 8px;
+  background-image: -webkit-radial-gradient(center center, circle 4px, #000000 90%, transparent), -webkit-radial-gradient(center Center, circle 4px, #000000 90%, transparent);
+  background-image: radial-gradient(circle 4px at center center, #000000 90%, transparent), radial-gradient(circle 4px at center Center, #000000 90%, transparent);
+}
+.polka.light {
+  background-size: 16px 16px, 16px 16px;
+  background-position: 0 0, 8px 8px;
+  background-image: -webkit-radial-gradient(center center, circle 1px, #000000 90%, transparent), -webkit-radial-gradient(center Center, circle 1px, #000000 90%, transparent);
+  background-image: radial-gradient(circle 1px at center center, #000000 90%, transparent), radial-gradient(circle 1px at center Center, #000000 90%, transparent);
+}
+.polka.colored {
+  background-size: 10px 10px, 10px 10px;
+  background-position: 0 0, 5px 5px;
+  background-image: -webkit-radial-gradient(center center, circle 2px, #0000ff 90%, transparent), -webkit-radial-gradient(center Center, circle 2px, #0000ff 90%, transparent);
+  background-image: radial-gradient(circle 2px at center center, #0000ff 90%, transparent), radial-gradient(circle 2px at center Center, #0000ff 90%, transparent);
+}
+.ugly {
+  background-size: 10px 10px, 10px 10px, auto, auto, 24px 24px, 24px 24px;
+  background-position: 0 0, 5px 5px, 0 0, 0 0, 0 0, 12px 12px;
+  background-image: -webkit-radial-gradient(center center, circle 2px, #0000ff 90%, transparent), -webkit-radial-gradient(center Center, circle 2px, #0000ff 90%, transparent), -webkit-repeating-linear-gradient(160deg, transparent 0, transparent 0.32em, #ff0000 0.35em, #ff0000 0.65em, transparent 0.68em, transparent 1em), -webkit-repeating-linear-gradient(70deg, transparent 0, transparent 0.44em, #ff0000 0.45em, #ff0000 0.55em, transparent 0.56em, transparent 1em), -webkit-linear-gradient(45deg, #008000 25%, transparent 25%, transparent 75%, #008000 75%), -webkit-linear-gradient(45deg, #008000 25%, transparent 25%, transparent 75%, #008000 75%);
+  background-image: radial-gradient(circle 2px at center center, #0000ff 90%, transparent), radial-gradient(circle 2px at center Center, #0000ff 90%, transparent), repeating-linear-gradient(-70deg, transparent 0, transparent 0.32em, #ff0000 0.35em, #ff0000 0.65em, transparent 0.68em, transparent 1em), repeating-linear-gradient(20deg, transparent 0, transparent 0.44em, #ff0000 0.45em, #ff0000 0.55em, transparent 0.56em, transparent 1em), linear-gradient(45deg, #008000 25%, transparent 25%, transparent 75%, #008000 75%), linear-gradient(45deg, #008000 25%, transparent 25%, transparent 75%, #008000 75%);
+}
+.blend.modes {
+  background-color: black;
+  background-blend-mode: screen;
+  background-size: 6px 6px, 6px 6px, 12px 12px, 12px 12px, 24px 24px, 24px 24px, 8px 8px, 8px 8px, 16px 16px, 16px 16px, auto, auto;
+  background-position: 0 0, 3px 3px, 0 0, 6px 6px, 0 0, 12px 12px, 0 0, 4px 4px, 0 0, 8px 8px, 0 0, 0 0;
+  background-image: -webkit-radial-gradient(center center, circle 2px, #003366 90%, transparent), -webkit-radial-gradient(center Center, circle 2px, #003366 90%, transparent), -webkit-radial-gradient(center center, circle 2px, #006633 90%, transparent), -webkit-radial-gradient(center Center, circle 2px, #006633 90%, transparent), -webkit-radial-gradient(center center, circle 2px, #003366 90%, transparent), -webkit-radial-gradient(center Center, circle 2px, #003366 90%, transparent), -webkit-radial-gradient(center center, circle 2px, #003333 90%, transparent), -webkit-radial-gradient(center Center, circle 2px, #003333 90%, transparent), -webkit-radial-gradient(center center, circle 2px, #006666 90%, transparent), -webkit-radial-gradient(center Center, circle 2px, #006666 90%, transparent), -webkit-repeating-linear-gradient(90deg, transparent 0, transparent 0.44em, #003399 0.45em, #003399 0.55em, transparent 0.56em, transparent 1em), -webkit-repeating-linear-gradient(0deg, transparent 0, transparent 0.44em, #003399 0.45em, #003399 0.55em, transparent 0.56em, transparent 1em);
+  background-image: radial-gradient(circle 2px at center center, #003366 90%, transparent), radial-gradient(circle 2px at center Center, #003366 90%, transparent), radial-gradient(circle 2px at center center, #006633 90%, transparent), radial-gradient(circle 2px at center Center, #006633 90%, transparent), radial-gradient(circle 2px at center center, #003366 90%, transparent), radial-gradient(circle 2px at center Center, #003366 90%, transparent), radial-gradient(circle 2px at center center, #003333 90%, transparent), radial-gradient(circle 2px at center Center, #003333 90%, transparent), radial-gradient(circle 2px at center center, #006666 90%, transparent), radial-gradient(circle 2px at center Center, #006666 90%, transparent), repeating-linear-gradient(0deg, transparent 0, transparent 0.44em, #003399 0.45em, #003399 0.55em, transparent 0.56em, transparent 1em), repeating-linear-gradient(90deg, transparent 0, transparent 0.44em, #003399 0.45em, #003399 0.55em, transparent 0.56em, transparent 1em);
+}
+:root {
+  font-family: Roboto;
+  padding: 5vh 5vmin;
+}
+body {
+  height: 90vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-flex-flow: space-around;
+      -ms-flex-flow: space-around;
+          flex-flow: space-around;
+  background-color: #ccc;
+}
+h1 {
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.666em;
+  line-height: 1.414;
+}
+section {
+  background-color: white;
+  width: 96px;
+  height: 96px;
+  margin: 1vmin;
+  margin-bottom: 2em;
+  position: relative;
+}
+section::after {
+  content: attr(class);
+  font-size: 0.65em;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 1.4;
+}
