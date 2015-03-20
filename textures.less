@@ -1,0 +1,67 @@
+.textures() {
+  .lines(
+    @angle: -45deg,
+    @color: black,
+    @size: 1em,
+    @width: 0.10,
+    @blur: 0.10
+  ) {
+
+    @mid: @size/2;
+
+    @a: (@width * @size * 0.5);
+    @b: (@width * @blur);
+
+    background-position+: 0 0;
+    background-size+: auto;
+    background-image+:
+      repeating-linear-gradient(
+        @angle,
+        transparent 0,
+        transparent (@mid - @a - @b),
+        @color (@mid - @a),
+        @color (@mid + @a),
+        transparent (@mid + @a + @b),
+        transparent @size);
+  }
+
+  .dots(
+    @spacing: 1em,
+    @size: 0.25,
+    @color: black,
+    @blur: 0.1)
+  {
+
+    @a: (@spacing * @size) * 0.5;
+    @b: (@spacing * @blur) * 0.5;
+
+    background-position+: 0 0;
+    background-size+: @spacing @spacing;
+    background-image+:
+      radial-gradient(circle closest-side, @color @a - @b, transparent @a + @b);
+  }
+
+  .checkered(@color: black, @size: 24px) {
+    background-size+: @size @size, @size @size;
+    background-position+: 0 0, (@size/2) (@size/2);
+    background-image+:
+      linear-gradient(45deg,
+        @color 25%,
+        transparent 25%,
+        transparent 75%,
+        @color 75%),
+      linear-gradient(45deg,
+        @color 25%,
+        transparent 25%,
+        transparent 75%,
+        @color 75%);
+  }
+
+  .polka(@color: black, @spread: 10px, @size: 2px) {
+    background-size+: @spread @spread, @spread @spread;
+    background-position+: 0 0, (@spread/2) (@spread/2);
+    background-image+:
+      radial-gradient(circle @size at center center, @color 90%, transparent),
+      radial-gradient(circle @size at center Center, @color 90%, transparent);
+  }
+}
